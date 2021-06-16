@@ -1,0 +1,76 @@
+//
+// Buttons and things that look like buttons
+//
+// stylelint-disable color-named
+
+.btn {
+  @apply rounded-lg hover:shadow-sm;
+  display: inline-flex;
+  margin: 0.1em 0 1em 0;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0em 1em;
+
+  a {
+    text-decoration: none;
+    @apply text-sm;
+  }
+
+  &a {
+    text-decoration: none;
+    @apply text-sm;
+  }
+  p {
+    margin: 0.5em 0 !important;
+  }
+}
+
+.btn-red {
+  @apply bg-red-600;
+  *,
+  a,
+  p {
+    @apply text-gray-100;
+  }
+}
+
+.btn-blue {
+  background: #413ce9;
+
+  *,
+  a {
+    color: white;
+  }
+}
+
+.btn-yellow {
+  background: #ffcb2b;
+
+  *,
+  a,
+  p {
+    @apply text-yellow-900;
+  }
+}
+
+.btn-gradient {
+  color: white;
+  background-image: linear-gradient(to right, #ff8901, #db1d5f);
+}
+
+.btn-gray {
+  @apply bg-gray-900;
+  *,
+  a,
+  p {
+    @apply text-gray-100;
+  }
+}
+
+.btn-img {
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+}

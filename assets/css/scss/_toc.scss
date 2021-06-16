@@ -1,0 +1,16 @@
+#table-of-contents {
+  display: none;
+}
+#table-of-contents + ul {
+  @apply border border-gray-200 rounded-lg mt-12   mb-4 md:mb-8 list-none;
+
+  li {
+    &:before {
+      content: "";
+    }
+
+    ul {
+      @apply list-none;
+    }
+  }
+}

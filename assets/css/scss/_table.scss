@@ -1,0 +1,41 @@
+table {
+  width: 100%;
+  margin-bottom: 1em;
+  overflow-x: auto;
+  margin-top: 1em;
+
+  @apply text-gray-700 text-sm;
+
+  thead {
+    width: 100%;
+    @apply bg-gray-100;
+
+    tr {
+      th {
+        padding: 1em 0;
+        font-weight: bold;
+        @apply border;
+      }
+    }
+  }
+
+  tbody {
+    width: 100%;
+
+    @apply font-thin text-gray-700;
+  }
+
+  tr {
+    td {
+      font-size: 1.2em;
+      padding: 0.5em 0.3em;
+      @apply border rounded-lg  font-thin text-gray-700 text-base;
+
+      @media screen and (max-width: 800px) {
+        & {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
