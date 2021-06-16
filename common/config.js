@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export const ApiService = axios.create({
-  baseURL: process.env.strapiBaseUri,
+  baseURL: 'https://stepcoding-server.herokuapp.com/',
 })

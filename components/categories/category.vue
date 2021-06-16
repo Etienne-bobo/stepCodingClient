@@ -180,6 +180,8 @@
 </template>
 <script>
 import Footer from '../../layouts/Footer.vue'
+import getMeta from '../../utils/meta.util'
+
 export default {
   components: {
     Footer,
@@ -206,6 +208,19 @@ export default {
       pageNumber: 0,
     }
   },
+  head() {
+    if (this.category.title) {
+      return {
+        title: this.category.title + ' - stepCoding',
+        description: this.category.description,
+
+        meta: getMeta({
+          title: this.category.title + ' - stepCoding',
+          description: this.category.description,
+        }),
+      }
+    }
+  },
   computed: {
     paginatedData() {
       const start = this.pageNumber * this.size
@@ -218,7 +233,6 @@ export default {
       return Math.ceil(l / s)
     },
   },
-
   methods: {
     nextPage() {
       this.pageNumber++

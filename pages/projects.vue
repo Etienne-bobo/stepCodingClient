@@ -17,6 +17,8 @@ import { ApiService } from '../common/config'
 import Navbar from '../layouts/NavBar.vue'
 import projects from '../components/projects/projects.vue'
 import Footer from '../layouts/Footer.vue'
+import getMeta from '~/utils/meta.util.js'
+
 export default {
   components: {
     Navbar,
@@ -27,6 +29,17 @@ export default {
     const response = await ApiService.get(`projects`)
     return {
       projects: response.data.reverse(),
+    }
+  },
+  head() {
+    return {
+      title: 'Projects - stepCoding',
+      description: 'My projects',
+
+      meta: getMeta({
+        title: 'Projects - stepCoding',
+        description: 'My projects',
+      }),
     }
   },
 }

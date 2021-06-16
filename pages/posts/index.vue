@@ -10,6 +10,8 @@
 import { ApiService } from '../../common/config'
 import Navbar from '../../layouts/NavBar.vue'
 import Posts from '../../components/posts/posts.vue'
+import getMeta from '~/utils/meta.util.js'
+
 export default {
   components: {
     Navbar,
@@ -19,6 +21,18 @@ export default {
     const response = await ApiService.get(`posts`)
     return {
       posts: response.data.reverse(),
+    }
+  },
+  head() {
+    return {
+      title: 'Articles - stepCoding',
+      description: 'find here articles at the cutting edge of the technology ',
+
+      meta: getMeta({
+        title: 'Articles - stepCoding',
+        description:
+          'find here articles at the cutting edge of the technology ',
+      }),
     }
   },
 }

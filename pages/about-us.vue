@@ -209,11 +209,24 @@
 <script>
 import NavbarComponent from '../layouts/NavBar.vue'
 import FooterComponent from '../layouts/Footer.vue'
+import getMeta from '~/utils/meta.util.js'
+
 export default {
   name: 'ProfilePage',
   components: {
     NavbarComponent,
     FooterComponent,
+  },
+  head() {
+    return {
+      title: 'About - stepCoding',
+      description: 'about me',
+
+      meta: getMeta({
+        title: 'About - stepCoding',
+        description: 'about me ',
+      }),
+    }
   },
 }
 </script>

@@ -71,7 +71,9 @@
 </template>
 <script>
 import Prism from '../../plugins/prism'
+import getMeta from '../../utils/meta.util'
 import SimilarPosts from './relatedPosts'
+
 export default {
   components: {
     SimilarPosts,
@@ -90,6 +92,19 @@ export default {
   },
   data() {
     return {}
+  },
+  head() {
+    if (this.post.title) {
+      return {
+        title: this.post.title + ' - stepCoding',
+        description: this.post.description,
+
+        meta: getMeta({
+          title: this.post.title + ' - stepCoding',
+          description: this.post.description,
+        }),
+      }
+    }
   },
   mounted() {
     Prism.highlightAll()

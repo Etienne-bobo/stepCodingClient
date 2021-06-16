@@ -17,6 +17,8 @@ import { ApiService } from '../../common/config'
 import Navbar from '../../layouts/NavBar.vue'
 import categories from '../../components/categories/categories.vue'
 import Footer from '../../layouts/Footer.vue'
+import getMeta from '~/utils/meta.util.js'
+
 export default {
   components: {
     Navbar,
@@ -27,6 +29,17 @@ export default {
     const response = await ApiService.get(`categories`)
     return {
       categories: response.data,
+    }
+  },
+  head() {
+    return {
+      title: 'Categories - stepCoding',
+      description: 'categories list',
+
+      meta: getMeta({
+        title: 'Categories - stepCoding',
+        description: 'categories list',
+      }),
     }
   },
 }
