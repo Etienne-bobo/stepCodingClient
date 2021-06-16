@@ -54,7 +54,7 @@
             <img
               alt="A"
               class="block rounded-full h-12 w-12"
-              :src="apiUrl + post.author.image.url"
+              :src="post.author.image.url"
             />
             <div class="ml-2 text-lg text-indigo-800 font-bold">
               {{ post.author.name }}
@@ -89,9 +89,7 @@ export default {
     },
   },
   data() {
-    return {
-      apiUrl: process.env.strapiBaseUri,
-    }
+    return {}
   },
   mounted() {
     Prism.highlightAll()

@@ -40,7 +40,7 @@
                   <img
                     v-if="category.image"
                     class="w-14 h-14 rounded-full"
-                    :src="apiUrl + category.image.url"
+                    :src="category.image.url"
                     alt=""
                   />
                 </div>
@@ -64,9 +64,7 @@ export default {
     },
   },
   data() {
-    return {
-      apiUrl: process.env.strapiBaseUri,
-    }
+    return {}
   },
 }
 </script>

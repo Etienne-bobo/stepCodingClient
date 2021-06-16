@@ -27,12 +27,12 @@
                 v-if="post.image"
                 alt="Placeholder"
                 class="block h-64 w-full"
-                :src="apiUrl + post.image.url"
+                :src="post.image.url"
               />
               <div v-if="post.tags">
                 <div class="flex flex-row">
                   <button
-                    v-for="(tag, index) in post.tags.data"
+                    v-for="(tag, index) in post.tags"
                     :key="index"
                     class="bg-indigo-500 text-white px-4"
                   >
@@ -96,9 +96,7 @@ export default {
     },
   },
   data() {
-    return {
-      apiUrl: process.env.strapiBaseUri,
-    }
+    return {}
   },
 }
 </script>
