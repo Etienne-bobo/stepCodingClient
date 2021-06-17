@@ -45,7 +45,7 @@
             "
           >
             <img
-              class="font-bold h-10"
+              class="font-bold h-12"
               src="../assets/images/logo.png"
               alt=""
             />
