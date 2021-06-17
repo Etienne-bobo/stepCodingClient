@@ -47,9 +47,8 @@
               <div
                 class="h-14 text-md text-white flex items-center justify-center"
               >
-                Get recents Articles<span class="material-icons ml-2 flex">
-                  markunread_mailbox
-                </span>
+                Get recents Articles<i class="ci-airplay text-lg ml-2 flex">
+                </i>
               </div>
             </div>
           </div>

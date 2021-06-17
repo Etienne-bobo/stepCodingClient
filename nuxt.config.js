@@ -25,7 +25,11 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/styles/main', '~/assets/css/scss/main.scss'],
+  css: [
+    '~/assets/styles/main',
+    '~/assets/css/scss/main.scss',
+    '~assets/coolicons.css',
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -45,7 +49,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['nuxt-material-design-icons', '@nuxtjs/markdownit'],
+  modules: ['@nuxtjs/markdownit'],
 
   markdownit: {
     preset: 'default',

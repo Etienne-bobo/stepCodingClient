@@ -10,6 +10,7 @@
         items-center
         justify-between
         flex-wrap
+        py-1
         lg:py-4
         m-auto
         px-4
@@ -75,8 +76,8 @@
                     type="button"
                     @click="togglePopover()"
                   >
-                    <span class="material-icons mr-2">search </span>
-                    <span>Search</span>
+                    <i class="ci-search text-lg font-semibold"> </i>
+                    <i class="ml-2 mt-1 font-semibold">search</i>
                   </button>
                 </div>
               </div>
@@ -113,14 +114,14 @@
                     text-white
                     px-4
                     pt-4
-                    pb-1
+                    pb-2
                     rounded-md
                     right-0
                     top-0
                     mt-2
                   "
                 >
-                  <span class="material-icons">search </span>
+                  <i class="ci-search text-lg"></i>
                 </button>
               </li>
             </div>
@@ -155,7 +156,6 @@
                       "
                     >
                       <span class="">Articles</span>
-                      <i class="ci-chevron_down text-xl"></i>
                     </button>
                   </div>
                 </div>
@@ -216,7 +216,6 @@
                     "
                   >
                     Contact
-                    <i class="ci-chevron_down text-xl ml-1"></i>
                   </button>
                 </div>
               </a>
@@ -240,7 +239,7 @@
                 placeholder="Search"
               />
               <button type="submit" class="absolute right-0 top-0 mt-4 mr-4">
-                <span class="material-icons">search </span>
+                <i class="ci-search text-xl"></i>
               </button>
             </li>
           </ul>
@@ -267,7 +266,7 @@
               pb-1
             "
           >
-            <span class="material-icons text-indigo-900">sms</span>
+            <i class="ci-chat text-xl text-indigo-900"></i>
 
             <span class="tab tab-home block text-xs">Articles</span>
           </a>
@@ -284,7 +283,7 @@
               pb-1
             "
           >
-            <span class="material-icons text-indigo-900">donut_small</span>
+            <i class="ci-laptop text-xl text-indigo-900"></i>
 
             <span class="tab tab-kategori block text-xs">My Projects</span>
           </a>
@@ -301,7 +300,7 @@
               pb-1
             "
           >
-            <span class="material-icons text-indigo-900">face</span>
+            <i class="ci-group text-xl text-indigo-900"></i>
 
             <span class="tab tab-explore block text-xs">About us</span>
           </a>
@@ -318,7 +317,7 @@
               pb-1
             "
           >
-            <span class="material-icons text-indigo-900">drafts</span>
+            <i class="ci-mail_open text-xl text-indigo-900"></i>
 
             <span class="tab tab-whishlist block text-xs">Contact us</span>
           </a>

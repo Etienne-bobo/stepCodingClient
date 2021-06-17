@@ -107,7 +107,7 @@
           h-10
           text-white
           mx-2
-          pt-2
+          pb-1
           rounded-full
           active:shadow-lg
           mouse
@@ -119,7 +119,7 @@
         "
         @click="prevPage"
       >
-        <i class="material-icons text-xl">chevron_left</i>
+        <i class="ci-chevron_left text-2xl"></i>
       </button>
       <button
         :disabled="pageNumber === 0"
@@ -154,7 +154,7 @@
           h-10
           text-white
           mx-2
-          pt-2
+          pb-1
           rounded-full
           active:shadow-lg
           mouse
@@ -166,7 +166,7 @@
         "
         @click="nextPage"
       >
-        <i class="material-icons text-xl">chevron_right</i>
+        <i class="ci-chevron_right text-2xl"></i>
       </button>
     </div>
     <div>
