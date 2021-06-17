@@ -10,7 +10,6 @@
         items-center
         justify-between
         flex-wrap
-        py-3
         lg:py-4
         m-auto
         px-4
