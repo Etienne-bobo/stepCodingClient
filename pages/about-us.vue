@@ -64,7 +64,7 @@
                   <div class="relative">
                     <img
                       alt="..."
-                      src="https://cdn.pixabay.com/photo/2021/01/28/08/51/girl-5957398_960_720.jpg"
+                      src="../assets/images/profile.jpeg"
                       class="
                         shadow-xl
                         rounded-full
@@ -89,41 +89,46 @@
                   "
                 >
                   <div class="py-6 px-3 flex justify-center mt-32 sm:mt-0">
-                    <button
-                      class="
-                        bg-indigo-500
-                        text-white
-                        font-bold
-                        hover:shadow-md
-                        shadow
-                        text-md
-                        px-4
-                        py-2
-                        rounded
-                        outline-none
-                        focus:outline-none
-                        sm:mr-2
-                        flex
-                        mb-1
-                      "
-                      type="button"
-                      style="transition: all 0.15s ease 0s"
+                    <a
+                      href="https://www.linkedin.com/in/efoé-etienne-blavo-486a6918a"
+                      target="_blank"
                     >
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="ml-2"
+                      <button
+                        class="
+                          bg-indigo-500
+                          text-white
+                          font-bold
+                          hover:shadow-md
+                          shadow
+                          text-md
+                          px-4
+                          py-2
+                          rounded
+                          outline-none
+                          focus:outline-none
+                          sm:mr-2
+                          flex
+                          mb-1
+                        "
+                        type="button"
+                        style="transition: all 0.15s ease 0s"
                       >
-                        <path
-                          d="M13 21H9V9H13V11C13.8526 9.91525 15.1456 9.26857 16.525 9.237C19.0056 9.25077 21.0072 11.2694 21 13.75V21H17V14.25C16.84 13.1326 15.8818 12.3036 14.753 12.306C14.2593 12.3216 13.7932 12.5378 13.4624 12.9046C13.1316 13.2715 12.9646 13.7573 13 14.25V21ZM7 21H3V9H7V21ZM5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5C7 5.53043 6.78929 6.03914 6.41421 6.41421C6.03914 6.78929 5.53043 7 5 7Z"
-                          fill="#2E3A59"
-                        ></path>
-                      </svg>
-                      <span class="">LinkedIn</span>
-                    </button>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="ml-2"
+                        >
+                          <path
+                            d="M13 21H9V9H13V11C13.8526 9.91525 15.1456 9.26857 16.525 9.237C19.0056 9.25077 21.0072 11.2694 21 13.75V21H17V14.25C16.84 13.1326 15.8818 12.3036 14.753 12.306C14.2593 12.3216 13.7932 12.5378 13.4624 12.9046C13.1316 13.2715 12.9646 13.7573 13 14.25V21ZM7 21H3V9H7V21ZM5 7C3.89543 7 3 6.10457 3 5C3 3.89543 3.89543 3 5 3C6.10457 3 7 3.89543 7 5C7 5.53043 6.78929 6.03914 6.41421 6.41421C6.03914 6.78929 5.53043 7 5 7Z"
+                            fill="#2E3A59"
+                          ></path>
+                        </svg>
+                        <span class="">LinkedIn</span>
+                      </button>
+                    </a>
                   </div>
                 </div>
                 <div class="w-full lg:w-4/12 px-4 lg:order-1">
@@ -138,9 +143,11 @@
                           tracking-wide
                           text-gray-700
                         "
-                        >22</span
-                      ><span class="text-sm text-gray-500"
-                        >Total number of articles</span
+                        >Team</span
+                      ><a class="text-indigo-500" href="https://byteslabs.dev"
+                        ><span class="text-sm text-gray-500"
+                          >byteslabs.dev</span
+                        ></a
                       >
                     </div>
                   </div>
@@ -187,11 +194,19 @@
                 <div class="flex flex-wrap justify-center">
                   <div class="w-full lg:w-9/12 px-4">
                     <p class="mb-4 text-lg leading-relaxed text-gray-800">
-                      An artist of considerable range, Jenna the name taken by
-                      Melbourne-raised, Brooklyn-based Nick Murphy writes,
-                      performs and records all of his own music, giving it a
-                      warm, intimate feel with a solid groove structure. An
-                      artist of considerable range.
+                      Computer engineering student and I am very passionate
+                      about programming and new techs. I love everything related
+                      to
+                      <span class="text-indigo-500">
+                        web development , machine learning.</span
+                      >
+                      I am also the person behind the stepCoding project. I
+                      maintain this website, write tutorials and publish
+                      articles .I am a developer at the start-up
+                      <span class="text-indigo-500">BytesLabs</span>
+                      in which I and my colleagues are working on projects for
+                      the development of mobile applications, websites and IT
+                      system architecture.
                     </p>
                   </div>
                 </div>

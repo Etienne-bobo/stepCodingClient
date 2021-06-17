@@ -41,8 +41,8 @@
           programming,robotics. It includes C, Java, PHP, Python, arduno, catia,
           matlab, machine learning...
         </p>
-        <nuxt-link to="/posts">
-          <div class="flex flex-wrap justify-center mt-8 lg:mb-8">
+        <div class="flex flex-wrap justify-center mt-8 lg:mb-8">
+          <nuxt-link to="/posts">
             <div class="bg-indigo-400 rounded-md w-3/4 md:w-64 px-2 md:mr-4">
               <div
                 class="h-14 text-md text-white flex items-center justify-center"
@@ -51,8 +51,8 @@
                 </i>
               </div>
             </div>
-          </div>
-        </nuxt-link>
+          </nuxt-link>
+        </div>
       </div>
     </div>
     <categories :categories="categories" />
