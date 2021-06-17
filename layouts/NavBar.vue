@@ -43,7 +43,12 @@
               py-2
               whitespace-no-wrap
             "
-            >stepCoding
+          >
+            <img
+              class="font-bold h-10"
+              src="../assets/images/logo.png"
+              alt=""
+            />
           </a>
           <ul class="flex lg:hidden flex-row list-none lg:ml-auto">
             <li class="relative mx-auto flex items-center text-gray-600">
