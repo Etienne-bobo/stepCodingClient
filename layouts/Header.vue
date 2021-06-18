@@ -42,16 +42,16 @@
           matlab, machine learning...
         </p>
         <div class="flex flex-wrap justify-center mt-8 lg:mb-8">
-          <nuxt-link to="/posts">
-            <div class="bg-indigo-400 rounded-md w-3/4 md:w-64 px-2 md:mr-4">
+          <div class="bg-indigo-400 rounded-md w-3/4 md:w-64 px-2 md:mr-4">
+            <a href="/posts">
               <div
                 class="h-14 text-md text-white flex items-center justify-center"
               >
                 Get recents Articles<i class="ci-airplay text-lg ml-2 flex">
                 </i>
               </div>
-            </div>
-          </nuxt-link>
+            </a>
+          </div>
         </div>
       </div>
     </div>

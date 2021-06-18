@@ -2,7 +2,7 @@
   <div>
     <navbar-component></navbar-component>
     <main class="profile-page absolute top-0 inset-x-0">
-      <section class="relative block" style="height: 500px">
+      <section class="relative block" style="height: 200px">
         <div
           class="absolute top-0 w-full bg-gray-200 h-full bg-center bg-cover"
         >
@@ -68,7 +68,8 @@
                       class="
                         shadow-xl
                         rounded-full
-                        h-36
+                        lg:h-36
+                        h-32
                         align-middle
                         border-none
                         absolute
