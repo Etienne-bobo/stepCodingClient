@@ -48,7 +48,7 @@
                     :key="index"
                     class="bg-indigo-500 text-white px-4"
                   >
-                    # {{ tag }}
+                    # {{ tag.name }}
                   </button>
                 </div>
               </div>

@@ -21,7 +21,7 @@
             type="text"
             placeholder="Search"
           />
-          <p class="mt-2 text-gray-700">Search articles by title and by tag</p>
+          <p class="mt-2 text-gray-700">Search articles by title</p>
           <section class="mt-8">
             <div v-for="result in results" :key="result.id" class="mb-4">
               <nuxt-link
