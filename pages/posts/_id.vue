@@ -3,7 +3,7 @@
     <nav-bar />
     <div class="absolute top-0 mt-24 inset-x-0 mx-auto">
       <Post :post="post" :similar-posts="similarPosts" />
-      <div align="center">
+      <div align="center" class="mx-4 lg:mx-0">
         <Footer />
       </div>
     </div>
