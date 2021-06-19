@@ -1,0 +1,184 @@
+<template>
+  <transition name="slide-fade" mode="out-in">
+    <div class="modal-backdrop" @keydown.esc="$emit('close')">
+      <div class="modal">
+        <div class="modal_header">
+          <p id="modal_header__title">Search for articles</p>
+          <button
+            id="close_search_btn"
+            class="text-gray-500 focus:outline-none"
+            @click="$emit('close')"
+          >
+            close
+          </button>
+        </div>
+
+        <div id="modal_search">
+          <label for="modal_search_input"></label>
+          <input
+            id="modal_search_input"
+            v-model="searchTerm"
+            type="text"
+            placeholder="Search"
+          />
+          <p class="mt-2 text-gray-700">Search articles by title and by tag</p>
+          <section class="mt-8">
+            <div v-for="result in results" :key="result.id" class="mb-4">
+              <nuxt-link
+                :to="{ name: 'posts-id', params: { id: result.slug } }"
+              >
+                <div class="border px-4 py-8 hover:shadow-md">
+                  <p class="font-semibold">{{ result.title }}</p>
+                  <p>{{ result.description }}</p>
+                </div>
+              </nuxt-link>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </transition>
+</template>
+
+<script>
+import { ApiService } from '../../common/config'
+export default {
+  name: 'SearchModal',
+  data: () => ({
+    searchTerm: '',
+    searchResults: [],
+  }),
+  computed: {
+    results() {
+      return this.searchResults.data
+    },
+  },
+  watch: {
+    async searchTerm() {
+      const searchTerm = this.searchTerm
+      if (searchTerm.length < 3) return []
+      const res = await ApiService.get('posts', {
+        params: {
+          title_contains: searchTerm,
+        },
+      })
+      this.searchResults = res
+    },
+  },
+  methods: {
+    close() {
+      this.$emit('close')
+    },
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+#modal_search {
+  padding: 3em;
+  hr {
+    display: block;
+    margin: 0.5em auto;
+    border-style: inset;
+    border-width: 1px;
+    opacity: 0.2;
+  }
+  #modal_search_input {
+    font-size: 2em;
+    width: 100%;
+    caret-color: darkgray;
+    @apply bg-gray-100 text-gray-700 rounded-lg border px-4 py-4 shadow;
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid #3399ff;
+    }
+  }
+  .result_title {
+    @apply font-medium text-2xl text-gray-700;
+  }
+  .result_title:hover {
+    @apply text-green-500;
+  }
+  .result_description {
+    @apply text-gray-600 mt-2 mb-6;
+  }
+  @media screen and (max-width: 800px) {
+    padding: 0.5em 0;
+    #modal_search_input {
+      padding: 0.5em 0.5em;
+      font-size: 1.2em;
+    }
+    .result_title {
+      @apply font-medium text-xl text-gray-700;
+    }
+    .result_description {
+      @apply text-sm text-gray-600;
+    }
+  }
+}
+.search_card {
+  padding-top: 1em;
+}
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+  transition: all 0.3s ease-in;
+}
+.slide-fade-leave-active {
+  transition: all 0.3s ease-out;
+}
+.slide-fade-enter, .slide-fade-leave-to
+        /* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+#close_search_btn {
+  cursor: pointer;
+}
+#modal_header__title {
+  font-size: 2em;
+  font-weight: bold;
+  @apply text-gray-700;
+}
+.modal_header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+}
+.modal-backdrop {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  @apply bg-white;
+  // box-shadow: 2px 2px 20px 1px;
+  overflow-x: auto;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  padding: 3em;
+}
+.modal-body {
+  margin-top: 1em;
+}
+.btn-close {
+  border: none;
+  font-size: 20px;
+  padding: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #4aae9b;
+  background: transparent;
+}
+</style>

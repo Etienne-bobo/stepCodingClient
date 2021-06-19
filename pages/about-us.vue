@@ -2,7 +2,7 @@
   <div>
     <navbar-component></navbar-component>
     <main class="profile-page absolute top-0 inset-x-0">
-      <section class="relative block" style="height: 200px">
+      <section class="relative block" style="height: 350px">
         <div
           class="absolute top-0 w-full bg-gray-200 h-full bg-center bg-cover"
         >
@@ -51,7 +51,7 @@
               bg-white
               w-full
               mb-6
-              shadow-xl
+              shadow-lg
               rounded-lg
               -mt-64
             "
@@ -70,11 +70,14 @@
                         rounded-full
                         lg:h-36
                         h-32
+                        w-32
+                        lg:w-36
                         align-middle
+                        justify-center
                         border-none
                         absolute
                         -m-16
-                        -ml-20
+                        -ml-16
                         lg:-ml-16
                       "
                       style="max-width: 150px"
@@ -201,11 +204,10 @@
                       <span class="text-indigo-500">
                         web development , machine learning.</span
                       >
-                      I am also the person behind the stepCoding project. I
-                      maintain this website, write tutorials and publish
+                      I maintain this website, write tutorials and publish
                       articles .I am a developer at the start-up
                       <span class="text-indigo-500">BytesLabs</span>
-                      in which I and my colleagues are working on projects for
+                      in which me and my colleagues are working on projects for
                       the development of mobile applications, websites and IT
                       system architecture.
                     </p>

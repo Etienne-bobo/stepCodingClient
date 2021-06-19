@@ -16,6 +16,7 @@
                 flex flex-col
                 min-w-0
                 break-words
+                hover:shadow-md
                 bg-white
                 w-full
                 mb-8

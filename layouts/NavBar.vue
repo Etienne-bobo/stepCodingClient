@@ -11,7 +11,7 @@
         justify-between
         flex-wrap
         py-1
-        lg:py-4
+        lg:py-3
         m-auto
         px-4
         top-0
@@ -19,7 +19,14 @@
       "
     >
       <div
-        class="container mx-auto flex flex-wrap items-center justify-between"
+        class="
+          container
+          mx-auto
+          max-w-7xl
+          flex flex-wrap
+          items-center
+          justify-between
+        "
       >
         <div
           class="
@@ -51,80 +58,25 @@
             />
           </a>
           <ul class="flex lg:hidden flex-row list-none lg:ml-auto">
-            <li class="relative mx-auto flex items-center text-gray-600">
-              <div class="">
-                <div class="w-full text-center">
-                  <button
-                    ref="btnRef"
-                    class="
-                      bg-indigo-500
-                      text-white
-                      font-bold
-                      text-sm
-                      flex
-                      px-6
-                      py-3
-                      rounded
-                      shadow
-                      hover:shadow-lg
-                      outline-none
-                      focus:outline-none
-                      ease-linear
-                      transition-all
-                      duration-150
-                    "
-                    type="button"
-                    @click="togglePopover()"
-                  >
-                    <i class="ci-search text-lg font-semibold"> </i>
-                    <i class="ml-2 mt-1 font-semibold">search</i>
-                  </button>
-                </div>
-              </div>
-            </li>
-            <div
-              ref="popoverRef"
-              :class="{
-                hidden: !popoverShow,
-                block: popoverShow,
-              }"
+            <button
+              class="
+                flex
+                px-5
+                rounded-md
+                items-center
+                text-md
+                font-medium
+                text-gray-800
+                my-2
+                focus:outline-none
+                bg-gray-100
+                hover:bg-gray-300
+              "
+              @click="showModal"
             >
-              <li class="pt-2 relative mx-auto text-gray-600">
-                <input
-                  class="
-                    border-2 border-gray-300
-                    bg-white
-                    px-5
-                    pb-4
-                    pt-3
-                    pr-16
-                    rounded-lg
-                    text-sm
-                    focus:outline-none
-                  "
-                  type="search"
-                  name="search"
-                  placeholder="Search"
-                />
-                <button
-                  type="submit"
-                  class="
-                    absolute
-                    bg-gray-400
-                    text-white
-                    px-4
-                    pt-4
-                    pb-2
-                    rounded-md
-                    right-0
-                    top-0
-                    mt-2
-                  "
-                >
-                  <i class="ci-search text-lg"></i>
-                </button>
-              </li>
-            </div>
+              <i class="ci-search"></i>
+              <i class="ml-2">Search</i>
+            </button>
           </ul>
         </div>
         <div
@@ -222,29 +174,30 @@
             </li>
           </ul>
           <ul class="flex sm:block flex-row list-none lg:ml-auto">
-            <li class="pt-2 relative flex items-center mx-auto text-gray-600">
-              <input
-                class="
-                  border-2 border-gray-300
-                  bg-white
-                  h-10
-                  px-5
-                  pr-16
-                  rounded-lg
-                  text-sm
-                  focus:outline-none
-                "
-                type="search"
-                name="search"
-                placeholder="Search"
-              />
-              <button type="submit" class="absolute right-0 top-0 mt-4 mr-4">
-                <i class="ci-search text-xl"></i>
-              </button>
-            </li>
+            <button
+              class="
+                flex
+                px-8
+                py-3
+                rounded-md
+                items-center
+                text-sm
+                font-medium
+                focus:outline-none
+                text-gray-800
+                bg-gray-100
+                border border-gray-300
+                hover:bg-gray-300
+              "
+              @click="showModal"
+            >
+              <i class="ci-search text-lg"></i>
+              <i class="text-sm sm:text-base ml-2">Search</i>
+            </button>
           </ul>
         </div>
       </div>
+      <SearchModal v-show="isModalVisible" @close="isModalVisible = false" />
     </nav>
     <div class="w-full lg:hidden h-screen">
       <!-- <section id="bottom-navigation" class="md:hidden block fixed inset-x-0 bottom-0 z-10 bg-white shadow"> // if shown only tablet/mobile-->
@@ -255,10 +208,14 @@
         <div id="tabs" class="flex justify-between py-3 shadow-lg">
           <a
             href="/posts"
+            :class="{
+              'text-indigo-500': $route.path == '/posts',
+              'text-gray-800': $route.path != '/posts',
+            }"
             class="
               w-full
               focus:text-teal-500
-              hover:text-teal-500
+              hover:text-indigo-500
               justify-center
               inline-block
               text-center
@@ -266,16 +223,20 @@
               pb-1
             "
           >
-            <i class="ci-chat text-xl text-indigo-900"></i>
+            <i class="ci-chat text-xl"></i>
 
             <span class="tab tab-home block text-xs">Articles</span>
           </a>
           <a
             href="/projects"
+            :class="{
+              'text-indigo-500': $route.path == '/projects',
+              'text-gray-800': $route.path != '/projects',
+            }"
             class="
               w-full
               focus:text-teal-500
-              hover:text-teal-500
+              hover:text-indigo-500
               justify-center
               inline-block
               text-center
@@ -283,16 +244,20 @@
               pb-1
             "
           >
-            <i class="ci-laptop text-xl text-indigo-900"></i>
+            <i class="ci-laptop text-xl"></i>
 
             <span class="tab tab-kategori block text-xs">My Projects</span>
           </a>
           <a
             href="/about-us"
+            :class="{
+              'text-indigo-500': $route.path == '/about-us',
+              'text-gray-800': $route.path != '/about-us',
+            }"
             class="
               w-full
               focus:text-teal-500
-              hover:text-teal-500
+              hover:text-indigo-500
               justify-center
               inline-block
               text-center
@@ -300,7 +265,7 @@
               pb-1
             "
           >
-            <i class="ci-group text-xl text-indigo-900"></i>
+            <i class="ci-group text-xl"></i>
 
             <span class="tab tab-explore block text-xs">About us</span>
           </a>
@@ -309,7 +274,8 @@
             class="
               w-full
               focus:text-teal-500
-              hover:text-teal-500
+              hover:text-indigo-500
+              text-gray-800
               justify-center
               inline-block
               text-center
@@ -317,7 +283,7 @@
               pb-1
             "
           >
-            <i class="ci-mail_open text-xl text-indigo-900"></i>
+            <i class="ci-mail_open text-xl"></i>
 
             <span class="tab tab-whishlist block text-xs">Contact us</span>
           </a>
@@ -328,16 +294,18 @@
 </template>
 <script>
 import { createPopper } from '@popperjs/core'
+import SearchModal from '../components/search/searchModal.vue'
 export default {
+  components: {
+    SearchModal,
+  },
   data() {
     return {
       isActive: '',
       showMenu: false,
       isOpen: false,
-      abitaUrl: process.env.abita,
-      helpUrl: process.env.help,
-      webUrl: process.env.web,
       popoverShow: false,
+      isModalVisible: false,
       view: {
         atTopOfPage: true,
       },
@@ -396,6 +364,12 @@ export default {
           placement: 'bottom',
         })
       }
+    },
+    showModal() {
+      this.isModalVisible = true
+    },
+    closeModal() {
+      this.isModalVisible = false
     },
   },
 }

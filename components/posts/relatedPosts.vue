@@ -20,6 +20,7 @@
             class="
               overflow-hidden
               rounded-lg
+              hover:shadow-md
               border
               focus:outline-none
               cardHeight

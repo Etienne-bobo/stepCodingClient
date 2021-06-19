@@ -9,6 +9,7 @@
             justify-center
             bg-white
             w-full
+            hover:shadow-md
             mb-8
             rounded-lg
             py-8
@@ -43,6 +44,7 @@
             bg-white
             w-full
             mb-8
+            hover:shadow-md
             rounded-lg
             py-8
             border
@@ -75,6 +77,7 @@
             justify-center
             bg-white
             w-full
+            hover:shadow-md
             mb-8
             rounded-lg
             py-8

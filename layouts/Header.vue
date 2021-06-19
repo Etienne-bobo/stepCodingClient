@@ -13,7 +13,7 @@
       mx-auto
     "
   >
-    <div class="lg:mt-12 mt-28 mx-auto">
+    <div class="md:mt-12 mt-28 mx-auto">
       <div class="pb-12 max-w-7xl px-6 justify-center pt-32 md:mt-8 -mt-32">
         <h1
           class="
@@ -32,6 +32,8 @@
             mt-8
             text-center
             lg:text-xl
+            max-w-4xl
+            mx-auto
             text-md text-gray-800
             flex
             justify-center
@@ -42,7 +44,17 @@
           matlab, machine learning...
         </p>
         <div class="flex flex-wrap justify-center mt-8 lg:mb-8">
-          <div class="bg-indigo-400 rounded-md w-3/4 md:w-64 px-2 md:mr-4">
+          <div
+            class="
+              bg-indigo-400
+              hover:bg-indigo-600
+              rounded-md
+              w-3/4
+              md:w-64
+              px-2
+              md:mr-4
+            "
+          >
             <a href="/posts">
               <div
                 class="h-14 text-md text-white flex items-center justify-center"

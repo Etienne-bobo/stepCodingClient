@@ -18,6 +18,7 @@
               class="
                 overflow-hidden
                 cardHeight
+                hover:shadow-md
                 border
                 focus:outline-none
                 rounded-lg
