@@ -46,24 +46,29 @@
         ></article>
       </div>
       <div>
-        <footer
+        <nuxt-link
           v-if="post.author"
-          class="flex items-center justify-between leading-none"
+          :to="{ name: 'authors-id', params: { id: post.author.slug } }"
         >
-          <div class="flex items-center no-underline text-black">
-            <img
-              alt="A"
-              class="block rounded-full h-12 w-12"
-              :src="post.author.image.url"
-            />
-            <div class="ml-2 text-lg text-indigo-800 font-bold">
-              {{ post.author.name }}
-              <p class="text-sm text-indigo-500 font-bold">
-                {{ post.author.role }}
-              </p>
+          <footer
+            v-if="post.author"
+            class="flex items-center justify-between leading-none"
+          >
+            <div class="flex items-center no-underline text-black">
+              <img
+                alt="A"
+                class="block rounded-full h-12 w-12"
+                :src="post.author.image.url"
+              />
+              <div class="ml-2 text-lg text-indigo-800 font-bold">
+                {{ post.author.name }}
+                <p class="text-sm text-indigo-500 font-bold">
+                  {{ post.author.role }}
+                </p>
+              </div>
             </div>
-          </div>
-        </footer>
+          </footer>
+        </nuxt-link>
       </div>
     </div>
     <similar-posts :similar-posts="similarPosts" />

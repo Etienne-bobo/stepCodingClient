@@ -95,6 +95,10 @@
                 <div>
                   <div class="dropdown inline-block relative">
                     <button
+                      :class="{
+                        'text-indigo-800': $route.path == '/posts',
+                        'text-white': $route.path != '/posts',
+                      }"
                       class="
                         font-semibold
                         text-white
@@ -116,6 +120,10 @@
             <li class="flex items-center">
               <a href="/about-us">
                 <button
+                  :class="{
+                    'text-indigo-800': $route.path == '/about-us',
+                    'text-white': $route.path != '/about-us',
+                  }"
                   class="
                     font-semibold
                     text-white
@@ -135,6 +143,10 @@
             <li class="flex items-center">
               <a href="/projects">
                 <button
+                  :class="{
+                    'text-indigo-800': $route.path == '/projects',
+                    'text-white': $route.path != '/projects',
+                  }"
                   class="
                     font-semibold
                     text-white
