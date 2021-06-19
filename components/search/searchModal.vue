@@ -15,15 +15,21 @@
 
         <div id="modal_search">
           <label for="modal_search_input"></label>
-          <input
-            id="modal_search_input"
-            v-model="searchTerm"
-            type="text"
-            placeholder="Search"
-          />
-          <p class="mt-2 text-gray-700">Search articles by title</p>
-          <section class="mt-8">
-            <div v-for="result in results" :key="result.id" class="mb-4">
+          <form @submit.prevent="results">
+            <input
+              id="modal_search_input"
+              v-model="searchTerm"
+              type="text"
+              placeholder="Search article by title..."
+            />
+          </form>
+          <p class="mt-2 text-gray-700">Press enter to search</p>
+          <section v-if="searchResults.length != 0" class="mt-8">
+            <div
+              v-for="(result, index) in searchResults"
+              :key="index"
+              class="mb-4"
+            >
               <nuxt-link
                 :to="{ name: 'posts-id', params: { id: result.slug } }"
               >
@@ -34,6 +40,29 @@
               </nuxt-link>
             </div>
           </section>
+          <section
+            v-if="errorMessage"
+            class="flex justify-center text-red-500 mx-auto text-lg mt-6"
+          >
+            {{ errorMessage }}
+          </section>
+          <button
+            v-if="anime"
+            class="
+              animate-ping
+              mx-auto
+              flex
+              justify-center
+              mt-8
+              py-3
+              px-6
+              bg-indigo-500
+              text-white
+              rounded-lg
+            "
+          >
+            searching...
+          </button>
         </div>
       </div>
     </div>
@@ -47,27 +76,47 @@ export default {
   data: () => ({
     searchTerm: '',
     searchResults: [],
+    anime: false,
+    errorMessage: '',
   }),
-  computed: {
-    results() {
-      return this.searchResults.data
-    },
-  },
-  watch: {
-    async searchTerm() {
-      const searchTerm = this.searchTerm
-      if (searchTerm.length < 3) return []
-      const res = await ApiService.get('posts', {
-        params: {
-          title_contains: searchTerm,
-        },
-      })
-      this.searchResults = res
-    },
-  },
+  // computed: {
+  //   results() {
+  //     return this.searchResults.data
+  //   },
+  // },
+  // watch: {
+  //   async searchTerm() {
+  //     const searchTerm = this.searchTerm
+  //     if (searchTerm.length < 3) return []
+  //     const res = await ApiService.get('posts', {
+  //       params: {
+  //         title_contains: searchTerm,
+  //       },
+  //     })
+  //     this.searchResults = res
+  //   },
+  // },
   methods: {
     close() {
       this.$emit('close')
+    },
+    async results() {
+      try {
+        this.anime = true
+        const searchTerm = this.searchTerm
+        if (searchTerm.length < 3) return []
+        const res = await ApiService.get('posts', {
+          params: {
+            title_contains: searchTerm,
+          },
+        })
+        this.searchResults = res.data
+      } finally {
+        this.anime = false
+        if (this.searchResults.length === 0) {
+          this.errorMessage = 'No articles found, Try another word'
+        }
+      }
     },
   },
 }
@@ -136,7 +185,7 @@ export default {
   cursor: pointer;
 }
 #modal_header__title {
-  font-size: 2em;
+  font-size: 18px;
   font-weight: bold;
   @apply text-gray-700;
 }
@@ -167,7 +216,7 @@ export default {
   width: 100%;
   height: 100%;
   flex-direction: column;
-  padding: 3em;
+  padding: 20px;
 }
 .modal-body {
   margin-top: 1em;
