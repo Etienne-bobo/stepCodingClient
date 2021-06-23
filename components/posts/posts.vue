@@ -63,7 +63,7 @@
                 "
               >
                 <p class="text-grey-darker text-sm">
-                  Publie le
+                  Published on
                   {{ $dateFns.format(post.published_at, 'dd-MM-yyyy') }}
                 </p>
               </header>

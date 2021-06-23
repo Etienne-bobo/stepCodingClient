@@ -47,7 +47,8 @@
               class="flex items-center justify-between leading-tight p-2 md:p-4"
             >
               <p class="text-grey-darker text-sm">
-                Publie le {{ $dateFns.format(post.published_at, 'dd-MM-yyyy') }}
+                Published on
+                {{ $dateFns.format(post.published_at, 'dd-MM-yyyy') }}
               </p>
             </header>
 
