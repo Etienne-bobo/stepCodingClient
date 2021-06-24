@@ -59,8 +59,8 @@ export default {
   },
 
   robots: {
-    Host: 'wwww.stepcodingtech.com',
-    Sitemap: 'wwww.stepcodingtech.com/sitemap.xml',
+    Host: 'https://stepcodingtech.com',
+    Sitemap: 'https://stepcodingtech.com/sitemap.xml',
   },
 
   env: {
@@ -77,6 +77,11 @@ export default {
         },
       },
     },
+  },
+
+  sitemap: {
+    hostname: 'https://stepcodingtech.com',
+    gzip: true,
   },
 
   generate: {
