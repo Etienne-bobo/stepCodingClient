@@ -49,7 +49,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/markdownit'],
+  modules: ['@nuxtjs/markdownit', '@nuxtjs/sitemap', '@nuxtjs/robots'],
 
   markdownit: {
     preset: 'default',
@@ -57,6 +57,12 @@ export default {
     breaks: true,
     injected: true,
   },
+
+  robots: {
+    Host: 'wwww.stepcodingtech.com',
+    Sitemap: 'wwww.stepcodingtech.com/sitemap.xml',
+  },
+
   env: {
     strapiBaseUri: 'https://stepcoding-server.herokuapp.com/',
   },
