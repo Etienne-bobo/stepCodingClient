@@ -13,7 +13,7 @@
           </button>
         </div>
 
-        <div id="modal_search">
+        <div id="modal_search" class="max-w-7xl mx-auto w-full">
           <label for="modal_search_input"></label>
           <form @submit.prevent="results">
             <input

@@ -1,25 +1,66 @@
 <template>
-  <div id="contact" class="flex flex-wrap max-w-7xl mx-auto mb-24">
-    <div class="w-full md:w-4/12 lg:pl-4 text-center">
+  <div
+    id="contact"
+    class="grid md:grid-cols-4 grid-cols-2 gap-3 max-w-7xl mx-auto mb-24"
+  >
+    <div class="w-full lg:px-4 text-center">
+      <a href="mailto: etiennebobo17@gmail.com" target="_blank">
+        <div
+          class="
+            relative
+            flex flex-row
+            justify-center
+            items-center
+            bg-white
+            w-full
+            mb-8
+            hover:shadow-md
+            rounded-lg
+            py-4
+            md:py-6
+            border
+          "
+        >
+          <p>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 20H4C2.89543 20 2 19.1046 2 18V5.913C2.04661 4.84255 2.92853 3.99899 4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20ZM4 7.868V18H20V7.868L12 13.2L4 7.868ZM4.8 6L12 10.8L19.2 6H4.8Z"
+                fill="#2E3A59"
+              ></path>
+            </svg>
+          </p>
+          <p class="text-lg text-red-20 ml-4 font-normal">Mail</p>
+        </div>
+      </a>
+    </div>
+    <div class="w-full lg:pl-4 text-center">
       <a href="https://instagram.com/etienne_bobo" target="_blank">
         <div
           class="
             relative
             flex flex-row
             justify-center
+            items-center
             bg-white
             w-full
             hover:shadow-md
             mb-8
             rounded-lg
-            py-8
+            py-4
+            md:py-6
             border
           "
         >
           <p>
             <svg
-              width="32"
-              height="32"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +75,7 @@
         </div>
       </a>
     </div>
-    <div class="w-full md:w-4/12 lg:px-4 text-center">
+    <div class="w-full md:3 lg:px-4 text-center">
       <a href="https://twitter.com/bobo_etienne/" target="_blank">
         <div
           class="
@@ -42,11 +83,13 @@
             flex flex-row
             justify-center
             bg-white
+            items-center
             w-full
             mb-8
             hover:shadow-md
             rounded-lg
-            py-8
+            py-4
+            md:py-6
             border
           "
         >
@@ -68,7 +111,7 @@
         </div>
       </a>
     </div>
-    <div class="w-full md:w-4/12 text-center">
+    <div class="w-full md:3 text-center">
       <a href="https://github.com/Etienne-bobo" target="_blank">
         <div
           class="
@@ -76,11 +119,13 @@
             flex flex-row
             justify-center
             bg-white
+            items-center
             w-full
             hover:shadow-md
             mb-8
             rounded-lg
-            py-8
+            py-4
+            md:py-6
             border
           "
         >

@@ -163,7 +163,7 @@
                 </button>
               </a>
             </li>
-            <li class="flex items-center">
+            <!-- <li class="flex items-center">
               <a href="#contact">
                 <div class="dropdown inline-block relative">
                   <button
@@ -183,7 +183,7 @@
                   </button>
                 </div>
               </a>
-            </li>
+            </li> -->
           </ul>
           <ul class="flex sm:block flex-row list-none lg:ml-auto">
             <button
@@ -218,6 +218,28 @@
         class="block fixed inset-x-0 bottom-0 z-10 bg-white shadow"
       >
         <div id="tabs" class="flex justify-between py-3 shadow-lg">
+          <a
+            href="/"
+            :class="{
+              'text-indigo-500': $route.path == '/',
+              'text-gray-800': $route.path != '/',
+            }"
+            class="
+              w-full
+              focus:text-teal-500
+              hover:text-indigo-500
+              text-gray-800
+              justify-center
+              inline-block
+              text-center
+              pt-2
+              pb-1
+            "
+          >
+            <i class="ci-home_alt_outline text-xl"></i>
+
+            <span class="tab tab-whishlist block text-xs">Home</span>
+          </a>
           <a
             href="/posts"
             :class="{
@@ -280,24 +302,6 @@
             <i class="ci-group text-xl"></i>
 
             <span class="tab tab-explore block text-xs">About us</span>
-          </a>
-          <a
-            href="#contact"
-            class="
-              w-full
-              focus:text-teal-500
-              hover:text-indigo-500
-              text-gray-800
-              justify-center
-              inline-block
-              text-center
-              pt-2
-              pb-1
-            "
-          >
-            <i class="ci-mail_open text-xl"></i>
-
-            <span class="tab tab-whishlist block text-xs">Contact us</span>
           </a>
         </div>
       </section>

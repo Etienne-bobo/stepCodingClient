@@ -51,7 +51,7 @@
               bg-white
               w-full
               mb-6
-              shadow-lg
+              border
               rounded-lg
               -mt-64
             "
@@ -92,7 +92,7 @@
                     lg:order-3 lg:text-right lg:self-center
                   "
                 >
-                  <div class="py-6 px-3 flex justify-center mt-32 sm:mt-0">
+                  <div class="py-6 px-3 flex justify-center mt-24 lg:mt-0">
                     <a
                       href="https://www.linkedin.com/in/efoé-etienne-blavo-486a6918a"
                       target="_blank"
@@ -157,7 +157,7 @@
                   </div>
                 </div>
               </div>
-              <div class="text-center mt-12">
+              <div class="text-center mt-6">
                 <h3
                   class="
                     text-4xl
@@ -186,15 +186,24 @@
                   Full Stack Dev, Machine Learning
                 </div>
                 <div class="mb-2 text-gray-700 mt-10">
+                  <i class="ci-location_outline text-lg"></i>
                   <i class="fas fa-briefcase mr-2 text-lg text-gray-500"></i
                   >Shimla, India
                 </div>
-                <div class="mb-2 text-gray-700">
+                <!-- <div class="mb-2 text-gray-700">
                   <i class="fas fa-university mr-2 text-lg text-gray-500"></i
                   >Computer Science
-                </div>
+                </div> -->
               </div>
-              <div class="mt-10 py-10 border-t border-gray-300 text-center">
+              <div
+                class="
+                  mt-10
+                  py-10
+                  border-t border-gray-300
+                  justify-between
+                  flex
+                "
+              >
                 <div class="flex flex-wrap justify-center">
                   <div class="w-full lg:w-9/12 px-4">
                     <p class="mb-4 text-lg leading-relaxed text-gray-800">
