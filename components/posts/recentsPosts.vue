@@ -18,6 +18,7 @@
               class="
                 overflow-hidden
                 cardHeight
+                smallHeight
                 hover:shadow-md
                 border
                 focus:outline-none
@@ -102,7 +103,12 @@ export default {
 }
 </script>
 <style scoped>
-.cardHeight {
-  height: 470px;
+.smallHeight {
+  height: 420px;
+}
+@media (min-width: 768px) {
+  .cardHeight {
+    height: 480px;
+  }
 }
 </style>

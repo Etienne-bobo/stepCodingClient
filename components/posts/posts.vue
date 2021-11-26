@@ -33,12 +33,13 @@
                 border
                 focus:outline-none
                 cardHeight
+                smallHeight
               "
             >
               <img
                 v-if="post.image"
                 alt="Placeholder"
-                class="block h-64 w-full"
+                class="block h-56 md:h-64 w-full"
                 :src="post.image.url"
               />
               <div v-if="post.tags">
@@ -223,7 +224,12 @@ export default {
 }
 </script>
 <style scoped>
-.cardHeight {
-  height: 470px;
+.smallHeight {
+  height: 420px;
+}
+@media (min-width: 768px) {
+  .cardHeight {
+    height: 480px;
+  }
 }
 </style>
