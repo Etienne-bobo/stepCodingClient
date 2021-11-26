@@ -52,7 +52,7 @@
             hover:shadow-md
             mb-8
             rounded-lg
-            py-4
+            py-3
             md:py-6
             border
           "
@@ -88,7 +88,7 @@
             mb-8
             hover:shadow-md
             rounded-lg
-            py-4
+            py-3
             md:py-6
             border
           "
@@ -124,7 +124,7 @@
             hover:shadow-md
             mb-8
             rounded-lg
-            py-4
+            py-3
             md:py-6
             border
           "
