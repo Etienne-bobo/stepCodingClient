@@ -245,6 +245,6 @@ export default {
 </script>
 <style scoped>
 .cardHeight {
-  height: 480px;
+  height: 470px;
 }
 </style>

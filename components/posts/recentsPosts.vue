@@ -27,7 +27,7 @@
               <img
                 v-if="post.image"
                 alt="Placeholder"
-                class="block h-64 w-full"
+                class="block md:h-64 h-56 w-full"
                 :src="post.image.url"
               />
               <div v-if="post.tags">
@@ -103,6 +103,6 @@ export default {
 </script>
 <style scoped>
 .cardHeight {
-  height: 480px;
+  height: 470px;
 }
 </style>

@@ -31,10 +31,9 @@
                     flex
                     items-center
                     px-4
-                    py-4
+                    py-3
                     md:py-6
                     justify-center
-                    shadow-sm
                     rounded-full
                   "
                 >
