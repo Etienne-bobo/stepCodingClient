@@ -54,10 +54,10 @@
               flex
               justify-center
               mt-8
-              py-3
-              px-6
+              py-1
+              px-4
               bg-indigo-500
-              text-white
+              text-white text-sm
               rounded-lg
             "
           >

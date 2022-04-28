@@ -1,11 +1,22 @@
 <template>
   <div>
     <Navbar />
-    <div align="center" class="mt-24 absolute top-0 inset-x-0 mx-auto">
-      <p class="text-xl lg:text-2xl text-gray-800 font-semibold mt-8">
-        All Projects list
+    <div class="mt-24 max-w-7xl absolute top-0 inset-x-0 mx-auto">
+      <p
+        class="
+          text-xl text-start
+          px-4
+          lg:text-2xl
+          text-gray-800
+          font-semibold
+          mt-8
+        "
+      >
+        Projects
       </p>
-      <projects :projects="projects" />
+      <div align="center">
+        <projects :projects="projects" />
+      </div>
       <div class="mx-4">
         <Footer />
       </div>
