@@ -2,18 +2,10 @@
   <div class="mx-4 block inset-x-0 justify-center absolute top-0">
     <div class="max-w-7xl mt-28 my-12 mx-auto lg:px-0">
       <div
-        class="text-2xl md:text-4xl text-center mb-6 font-bold text-indigo-900"
+        class="text-2xl md:text-4xl text-start mb-6 font-bold text-indigo-900"
       >
-        <span
-          class="
-            text-2xl
-            md:text-4xl
-            text-center
-            mb-6
-            font-bold
-            text-indigo-900
-          "
-          >All articles list</span
+        <span class="text-2xl md:text-4xl mb-6 font-bold text-indigo-900"
+          >Articles({{ posts.length }})</span
         >
       </div>
       <div class="flex flex-wrap">

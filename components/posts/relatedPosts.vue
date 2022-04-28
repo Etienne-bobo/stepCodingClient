@@ -6,7 +6,7 @@
     >
       Similar articles
     </p>
-    <div class="flex flex-wrap mx-auto px-4 md:px-0 my-12">
+    <div class="flex flex-wrap mx-auto md:px-0 my-12">
       <!-- Column -->
 
       <div
