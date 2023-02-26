@@ -21,7 +21,8 @@
                 bg-white
                 w-full
                 mb-6
-                md:mb-0
+                py-1
+                md:py-0 md:mb-0
                 rounded-lg
                 border
               "
