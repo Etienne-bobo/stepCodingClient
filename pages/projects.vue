@@ -44,11 +44,11 @@ export default {
   },
   head() {
     return {
-      title: 'Projects - stepCoding',
+      title: 'Projects - step coding',
       description: 'My projects',
 
       meta: getMeta({
-        title: 'Projects - stepCoding',
+        title: 'Projects - step coding',
         description: 'My projects',
       }),
     }

@@ -246,11 +246,11 @@ export default {
   },
   head() {
     return {
-      title: 'About - stepCoding',
+      title: 'About - step coding',
       description: 'about me',
 
       meta: getMeta({
-        title: 'About - stepCoding',
+        title: 'About - step coding',
         description: 'about me ',
       }),
     }

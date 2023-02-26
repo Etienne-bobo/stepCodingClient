@@ -1,7 +1,7 @@
 <template>
-  <div class="mx-4 mb-32">
+  <div class="mx-4 mb-4">
     <div class="max-w-7xl mx-auto">
-      <p class="text-indigo-500 text-xl md:px-0 my-12 font-bold">
+      <p class="text-indigo-500 text-xl md:px-0 my-2 font-bold">
         Popular articles
       </p>
       <div class="flex flex-wrap mx-auto md:px-0 my-12">

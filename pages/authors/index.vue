@@ -33,11 +33,11 @@ export default {
   },
   head() {
     return {
-      title: 'authors - stepCoding',
+      title: 'authors - step coding',
       description: 'authors list',
 
       meta: getMeta({
-        title: 'authors - stepCoding',
+        title: 'authors - step coding',
         description: 'authors list',
       }),
     }

@@ -212,11 +212,11 @@ export default {
   head() {
     if (this.category.title) {
       return {
-        title: this.category.title + ' - stepCoding',
+        title: this.category.title + ' - step coding',
         description: this.category.description,
 
         meta: getMeta({
-          title: this.category.title + ' - stepCoding',
+          title: this.category.title + ' - step coding',
           description: this.category.description,
         }),
       }

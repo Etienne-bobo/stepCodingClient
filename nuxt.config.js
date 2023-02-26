@@ -8,7 +8,7 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'stepCoding',
+    title: 'step coding',
     htmlAttrs: {
       lang: 'en',
     },
@@ -21,7 +21,7 @@ export default {
         content: 'width=device-width, initial-scale=1',
       },
       ...createSEOMeta({
-        title: 'stepCoding',
+        title: 'step coding',
         description:
           'find here articles at the cutting edge of the technology ',
       }),

@@ -101,11 +101,11 @@ export default {
   head() {
     if (this.post.title) {
       return {
-        title: this.post.title + ' - stepCoding',
+        title: this.post.title + ' - step coding',
         description: this.post.description,
 
         meta: getMeta({
-          title: this.post.title + ' - stepCoding',
+          title: this.post.title + ' - step coding',
           description: this.post.description,
         }),
       }

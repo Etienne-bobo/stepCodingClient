@@ -33,11 +33,11 @@ export default {
   },
   head() {
     return {
-      title: 'Categories - stepCoding',
+      title: 'Categories - step coding',
       description: 'categories list',
 
       meta: getMeta({
-        title: 'Categories - stepCoding',
+        title: 'Categories - step coding',
         description: 'categories list',
       }),
     }

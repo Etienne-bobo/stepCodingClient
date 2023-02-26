@@ -23,11 +23,11 @@ export default {
   },
   head() {
     return {
-      title: 'stepCoding',
+      title: 'step coding',
       description: 'find here articles at the cutting edge of the technology ',
 
       meta: getMeta({
-        title: 'stepCoding',
+        title: 'step coding',
         description:
           'find here articles at the cutting edge of the technology ',
       }),
