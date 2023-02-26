@@ -88,7 +88,7 @@ export default {
   },
 
   env: {
-    strapiBaseUri: 'https://stepcoding-server.herokuapp.com/',
+    strapiBaseUri: 'https://stpcoding-backend.herokuapp.com/',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

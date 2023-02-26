@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export const ApiService = axios.create({
-  baseURL: 'https://stepcoding-server.herokuapp.com/',
+  baseURL: 'https://stpcoding-backend.herokuapp.com/',
 })
