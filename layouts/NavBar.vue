@@ -53,7 +53,7 @@
             "
           >
             <img
-              class="font-bold h-16"
+              class="font-bold h-14"
               src="../assets/images/logo.png"
               alt=""
             />

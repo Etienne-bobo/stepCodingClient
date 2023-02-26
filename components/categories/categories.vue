@@ -41,18 +41,7 @@
                 >
                   <img
                     v-if="category.image"
-                    class="
-                      w-14
-                      h-14
-                      p-1
-                      mr-20
-                      md:mr-32
-                      border border-gray-200
-                      mb-20
-                      absolute
-                      shadow-md
-                      rounded-full
-                    "
+                    class="w-14 h-14 mr-4 border border-gray-200 rounded-full"
                     :src="category.image.url"
                     alt=""
                   />
