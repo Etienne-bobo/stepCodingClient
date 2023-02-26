@@ -44,7 +44,9 @@
                     :src="category.image.url"
                     alt=""
                   />
-                  <p class="text-xl font-normal">{{ category.name }}</p>
+                  <p class="md:text-xl text-sm font-normal">
+                    {{ category.name }}
+                  </p>
                 </div>
               </div>
             </div>

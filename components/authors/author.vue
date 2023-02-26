@@ -195,10 +195,7 @@
             <p class="text-indigo-500 text-xl px-4 my-4 font-bold">
               My articles
             </p>
-            <div
-              v-if="author.posts"
-              class="flex flex-wrap mx-auto md:px-0 my-12"
-            >
+            <div v-if="author.posts" class="flex flex-wrap mx-auto md:px-0">
               <!-- Column -->
 
               <div
@@ -288,7 +285,7 @@
             </div>
           </div>
         </div>
-        <div class="mb-16 max-w-7xl mx-auto">
+        <div class="mb-4 max-w-7xl mx-auto">
           <p class="text-indigo-500 px-4 text-xl my-4 font-bold">My Projects</p>
           <div class="flex flex-wrap max-w-7xl">
             <div
