@@ -45,7 +45,7 @@
           v-html="$md.render(post.content || '')"
         ></article>
       </div>
-      <!-- <div>
+      <div>
         <nuxt-link
           v-if="post.author"
           :to="{ name: 'authors-id', params: { id: post.author.slug } }"
@@ -69,7 +69,7 @@
             </div>
           </footer>
         </nuxt-link>
-      </div> -->
+      </div>
     </div>
     <similar-posts :similar-posts="similarPosts" />
   </div>

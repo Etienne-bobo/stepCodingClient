@@ -29,9 +29,9 @@
                   {{ project.description }}
                 </p>
               </div>
-              <p v-if="project.author" class="text-indigo-500 pb-4">
+              <!-- <p v-if="project.author" class="text-indigo-500 pb-4">
                 by {{ project.author.name }}
-              </p>
+              </p> -->
             </div>
           </a>
         </div>

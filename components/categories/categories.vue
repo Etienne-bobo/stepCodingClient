@@ -21,7 +21,6 @@
                 bg-white
                 w-full
                 mb-6
-                py-1
                 md:py-0 md:mb-0
                 rounded-lg
                 border
@@ -41,7 +40,7 @@
                 >
                   <img
                     v-if="category.image"
-                    class="w-14 h-14 mr-4 border border-gray-200 rounded-full"
+                    class="w-12 h-12 mr-4 border border-gray-200 rounded-full"
                     :src="category.image.url"
                     alt=""
                   />

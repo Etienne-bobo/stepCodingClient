@@ -134,9 +134,9 @@
                   </div>
                 </div>
                 <div class="w-full lg:w-4/12 px-4 lg:order-1">
-                  <div class="flex justify-center py-4 lg:pt-4 pt-8">
+                  <div class="flex justify-center py-4 lg:pt-4 pt-4">
                     <div class="mr-4 p-3 text-center">
-                      <span
+                      <!-- <span
                         class="
                           text-xl
                           font-bold
@@ -146,19 +146,18 @@
                           text-gray-700
                         "
                         >Team</span
-                      ><a class="text-indigo-500" href="https://byteslabs.dev"
-                        ><span class="text-sm text-gray-500"
-                          >byteslabs.dev</span
-                        ></a
+                      > -->
+                      <a class="text-indigo-500" href="https://byteslabs.dev"
+                        ><span class="text-sm text-gray-500">France</span></a
                       >
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="text-center mt-12">
+              <div class="text-center md:mt-12">
                 <h3
                   class="
-                    text-4xl
+                    text-xl
                     font-semibold
                     leading-normal
                     mb-2
@@ -183,17 +182,17 @@
                   ></i>
                   {{ author.role }}
                 </div>
-                <div class="mb-2 text-gray-700 mt-10">
+                <!-- <div class="mb-2 text-gray-700 mt-10">
                   <i class="fas fa-briefcase mr-2 text-lg text-gray-500"></i
-                  >Shimla, India
-                </div>
+                  >France
+                </div> -->
               </div>
             </div>
           </div>
         </div>
-        <div class="mx-4 mb-32">
+        <div class="mb-8">
           <div class="max-w-7xl mx-auto">
-            <p class="text-indigo-500 text-2xl md:px-0 my-12 font-bold">
+            <p class="text-indigo-500 text-xl px-4 my-4 font-bold">
               My articles
             </p>
             <div
@@ -205,7 +204,7 @@
               <div
                 v-for="post in author.posts"
                 :key="post.id"
-                class="my-1 px-1 md:w-1/2 md:mx-0 mx-auto w-96 lg:w-1/3"
+                class="mlg:pt-12 pt-8 w-full md:w-4/12 px-4"
               >
                 <!-- Article -->
                 <nuxt-link
@@ -214,6 +213,7 @@
                   <div
                     class="
                       overflow-hidden
+                      smallHeight
                       cardHeight
                       hover:shadow-md
                       border
@@ -221,12 +221,12 @@
                       rounded-lg
                     "
                   >
-                    <img
+                    <!-- <img
                       v-if="post.image"
                       alt="Placeholder"
                       class="block h-64 w-full"
                       :src="post.image.url"
-                    />
+                    /> -->
                     <div v-if="post.tags">
                       <div class="flex flex-row">
                         <button
@@ -288,6 +288,42 @@
             </div>
           </div>
         </div>
+        <div class="mb-16 max-w-7xl mx-auto">
+          <p class="text-indigo-500 px-4 text-xl my-4 font-bold">My Projects</p>
+          <div class="flex flex-wrap max-w-7xl">
+            <div
+              v-for="(project, index) in author.projects"
+              :key="index"
+              class="lg:pt-12 pt-8 w-full md:w-4/12 px-4"
+            >
+              <a :href="project.link" target="_blank" rel="noopener noreferrer">
+                <div
+                  class="
+                    relative
+                    flex flex-col
+                    min-w-0
+                    smallHeightProject
+                    break-words
+                    bg-white
+                    w-full
+                    border border-gray-300
+                    hover:shadow-md
+                    rounded-lg
+                  "
+                >
+                  <div class="px-4 py-5 flex-auto">
+                    <span class="text-lg font-semibold">{{
+                      project.name
+                    }}</span>
+                    <p class="text-sm mt-3 font-normal">
+                      {{ project.description }}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
       <div class="mx-4">
         <footer-component></footer-component>
@@ -314,11 +350,11 @@ export default {
   head() {
     if (this.author.name) {
       return {
-        title: this.author.name + ' - stepCoding',
+        title: this.author.name + ' - step coding',
         description: this.author.role,
 
         meta: getMeta({
-          title: this.author.name + ' - stepCoding',
+          title: this.author.name + ' - step coding',
           description: this.author.role,
         }),
       }
@@ -326,3 +362,19 @@ export default {
   },
 }
 </script>
+<style scoped>
+.smallHeight {
+  height: 200px;
+}
+.smallHeightProject {
+  height: 130px;
+}
+@media (min-width: 768px) {
+  .cardHeight {
+    height: 200px;
+  }
+  .smallHeightProject {
+    height: 130px;
+  }
+}
+</style>
