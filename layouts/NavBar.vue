@@ -219,8 +219,8 @@
           <a
             href="/"
             :class="{
-              'text-white bg-indigo-500 rounded-md': $route.path == '/',
-              'text-gray-800 hover:text-indigo-400': $route.path != '/',
+              'text-white bg-indigo-400 rounded-md': $route.path == '/',
+              'text-gray-800 hover:text-indigo-500': $route.path != '/',
             }"
             class="
               w-full
@@ -239,8 +239,8 @@
           <a
             href="/posts"
             :class="{
-              'text-white bg-indigo-500 rounded-md': $route.path == '/posts',
-              'text-gray-800 hover:text-indigo-400': $route.path != '/posts',
+              'text-white bg-indigo-400 rounded-md': $route.path == '/posts',
+              'text-gray-800 hover:text-indigo-500': $route.path != '/posts',
             }"
             class="
               w-full
@@ -259,8 +259,8 @@
           <a
             href="/projects"
             :class="{
-              'text-white bg-indigo-500 rounded-md': $route.path == '/projects',
-              'text-gray-800 hover:text-indigo-400': $route.path != '/projects',
+              'text-white bg-indigo-400 rounded-md': $route.path == '/projects',
+              'text-gray-800 hover:text-indigo-500': $route.path != '/projects',
             }"
             class="
               w-full
@@ -279,8 +279,8 @@
           <a
             href="/about-us"
             :class="{
-              'text-white bg-indigo-500 rounded-md': $route.path == '/about-us',
-              'text-gray-800 hover:text-indigo-400': $route.path != '/about-us',
+              'text-white bg-indigo-400 rounded-md': $route.path == '/about-us',
+              'text-gray-800 hover:text-indigo-500': $route.path != '/about-us',
             }"
             class="
               w-full
