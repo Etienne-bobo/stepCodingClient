@@ -220,7 +220,7 @@
             href="/"
             :class="{
               'text-white bg-indigo-500 rounded-md': $route.path == '/',
-              'text-gray-800 hover:text-indigo-500': $route.path != '/',
+              'text-gray-800 hover:text-indigo-400': $route.path != '/',
             }"
             class="
               w-full
@@ -240,7 +240,7 @@
             href="/posts"
             :class="{
               'text-white bg-indigo-500 rounded-md': $route.path == '/posts',
-              'text-gray-800 hover:text-indigo-500': $route.path != '/posts',
+              'text-gray-800 hover:text-indigo-400': $route.path != '/posts',
             }"
             class="
               w-full
@@ -260,7 +260,7 @@
             href="/projects"
             :class="{
               'text-white bg-indigo-500 rounded-md': $route.path == '/projects',
-              'text-gray-800 hover:text-indigo-500': $route.path != '/projects',
+              'text-gray-800 hover:text-indigo-400': $route.path != '/projects',
             }"
             class="
               w-full
@@ -280,7 +280,7 @@
             href="/about-us"
             :class="{
               'text-white bg-indigo-500 rounded-md': $route.path == '/about-us',
-              'text-gray-800 hover:text-indigo-500': $route.path != '/about-us',
+              'text-gray-800 hover:text-indigo-400': $route.path != '/about-us',
             }"
             class="
               w-full
