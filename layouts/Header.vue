@@ -14,22 +14,30 @@
     "
   >
     <div class="md:mt-12 mt-28 mx-auto">
-      <div class="pb-12 max-w-7xl px-6 justify-center pt-32 md:mt-8 -mt-32">
+      <div>
         <h1
           class="
-            lg:text-5xl
-            text-gray-800 text-2xl
+            max-w-7xl
+            px-6
+            lg:text-4xl
+            text-indigo-800 text-xl
             font-bold
             flex
             justify-center
             text-center
+            md:mt-32
           "
         >
           Find here articles at the cutting edge of technology
         </h1>
+      </div>
+      <div>
+        <img class="h-full w-full" src="../assets/images/header.jpg" alt="" />
+      </div>
+      <div class="pb-12 max-w-7xl px-4 justify-center pt-4 md:mt-8">
         <p
           class="
-            mt-8
+            mt-6
             text-center
             lg:text-xl
             max-w-4xl

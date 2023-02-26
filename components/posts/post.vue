@@ -18,8 +18,8 @@
         class="
           flex
           justify-center
-          text-2xl
-          md:text-5xl
+          text-xl
+          md:text-4xl
           text-indigo-800
           font-bold
           mx-auto
@@ -31,7 +31,7 @@
       >
         <span>{{ post.title }}</span>
       </div>
-      <div class="max-w-4xl mx-auto text-center text-lg mb-8">
+      <div class="max-w-4xl mx-auto text-center text-md mb-8">
         <span>{{ post.description }}</span>
       </div>
       <div v-if="post.cover" class="">

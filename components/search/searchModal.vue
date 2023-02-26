@@ -33,7 +33,7 @@
               <nuxt-link
                 :to="{ name: 'posts-id', params: { id: result.slug } }"
               >
-                <div class="border px-4 py-8 hover:shadow-md">
+                <div class="border rounded-md px-4 py-8 hover:shadow-md">
                   <p class="font-semibold">{{ result.title }}</p>
                   <p>{{ result.description }}</p>
                 </div>
@@ -54,14 +54,12 @@
               flex
               justify-center
               mt-8
-              py-1
               px-4
-              bg-indigo-500
-              text-white text-sm
+              text-indigo-500 text-sm
               rounded-lg
             "
           >
-            searching...
+            loading...
           </button>
         </div>
       </div>

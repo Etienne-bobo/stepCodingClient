@@ -13,13 +13,14 @@
                 relative
                 flex flex-col
                 min-w-0
+                smallHeight
+                cardHeight
                 break-words
                 bg-white
                 w-full
-                mb-8
-                shadow-sm
+                border border-gray-300
+                hover:shadow-md
                 rounded-lg
-                border
               "
             >
               <div class="px-4 py-5 flex-auto">
@@ -53,3 +54,13 @@ export default {
   },
 }
 </script>
+<style scoped>
+.smallHeight {
+  height: 130px;
+}
+@media (min-width: 768px) {
+  .cardHeight {
+    height: 130px;
+  }
+}
+</style>

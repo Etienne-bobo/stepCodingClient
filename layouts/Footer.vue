@@ -1,9 +1,18 @@
 <template>
   <div
     id="contact"
-    class="grid md:grid-cols-4 grid-cols-2 gap-3 max-w-7xl mx-auto mb-24"
+    class="
+      grid
+      md:grid-cols-4
+      grid-cols-4
+      gap-3
+      max-w-7xl
+      mx-auto
+      mb-16
+      md:mb-24
+    "
   >
-    <div class="w-full lg:px-4 text-center">
+    <div class="w-full text-center">
       <a href="mailto: etiennebobo17@gmail.com" target="_blank">
         <div
           class="
@@ -35,7 +44,7 @@
               ></path>
             </svg>
           </p>
-          <p class="text-lg text-red-20 ml-4 font-normal">Mail</p>
+          <!-- <p class="text-lg text-red-20 ml-4 font-normal"></p> -->
         </div>
       </a>
     </div>
@@ -71,7 +80,7 @@
               ></path>
             </svg>
           </p>
-          <p class="text-lg text-red-20 ml-4 font-normal">Instagram</p>
+          <!-- <p class="text-lg text-red-20 ml-4 font-normal">Instagram</p> -->
         </div>
       </a>
     </div>
@@ -107,7 +116,7 @@
               ></path>
             </svg>
           </p>
-          <p class="text-lg text-red-20 ml-4 font-normal">Twitter</p>
+          <!-- <p class="text-lg text-red-20 ml-4 font-normal">Twitter</p> -->
         </div>
       </a>
     </div>
@@ -143,7 +152,7 @@
               ></path>
             </svg>
           </p>
-          <p class="text-lg text-red-20 ml-4 font-normal">Github</p>
+          <!-- <p class="text-lg text-red-20 ml-4 font-normal">Github</p> -->
         </div>
       </a>
     </div>

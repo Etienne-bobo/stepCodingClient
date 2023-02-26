@@ -2,7 +2,7 @@
   <div class="max-w-7xl mx-auto">
     <p
       v-if="similarPosts.length != 0"
-      class="text-indigo-800 text-3xl my-12 font-bold"
+      class="text-indigo-800 text-xl my-12 font-bold"
     >
       Similar articles
     </p>
@@ -12,7 +12,7 @@
       <div
         v-for="post in similarPosts"
         :key="post.id"
-        class="my-1 px-1 md:mx-0 mx-auto w-96 md:w-1/2 lg:w-1/3"
+        class="my-1 md:mx-0 mx-auto w-96 md:w-1/2 lg:w-1/3"
       >
         <!-- Article -->
         <nuxt-link :to="{ name: 'posts-id', params: { id: post.slug } }">
@@ -26,12 +26,12 @@
               cardHeight
             "
           >
-            <img
+            <!-- <img
               v-if="post.image"
               alt="Placeholder"
               class="block h-64 w-full"
               :src="post.image.url"
-            />
+            /> -->
             <div v-if="post.tags">
               <div class="flex flex-row">
                 <button
@@ -89,6 +89,6 @@ export default {
 </script>
 <style scoped>
 .cardHeight {
-  height: 450px;
+  height: 230px;
 }
 </style>

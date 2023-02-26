@@ -6,7 +6,7 @@
         fixed
         flex
         w-full
-        bg-indigo-500
+        bg-white
         items-center
         justify-between
         flex-wrap
@@ -16,6 +16,7 @@
         px-4
         top-0
         animated
+        shadow-sm
       "
     >
       <div
@@ -52,7 +53,7 @@
             "
           >
             <img
-              class="font-bold h-12"
+              class="font-bold h-16"
               src="../assets/images/logo.png"
               alt=""
             />
@@ -97,11 +98,10 @@
                     <button
                       :class="{
                         'text-indigo-800': $route.path == '/posts',
-                        'text-white': $route.path != '/posts',
+                        'text-indigo-500': $route.path != '/posts',
                       }"
                       class="
                         font-semibold
-                        text-white
                         focus:outline-none
                         hover:text-indigo-900
                         py-2
@@ -122,11 +122,10 @@
                 <button
                   :class="{
                     'text-indigo-800': $route.path == '/about-us',
-                    'text-white': $route.path != '/about-us',
+                    'text-indigo-500': $route.path != '/about-us',
                   }"
                   class="
                     font-semibold
-                    text-white
                     hover:text-indigo-900
                     py-2
                     focus:outline-none
@@ -145,11 +144,10 @@
                 <button
                   :class="{
                     'text-indigo-800': $route.path == '/projects',
-                    'text-white': $route.path != '/projects',
+                    'text-indigo-500': $route.path != '/projects',
                   }"
                   class="
                     font-semibold
-                    text-white
                     py-2
                     px-4
                     hover:text-indigo-900
@@ -221,14 +219,12 @@
           <a
             href="/"
             :class="{
-              'text-indigo-500': $route.path == '/',
-              'text-gray-800': $route.path != '/',
+              'text-white bg-indigo-500 rounded-md': $route.path == '/',
+              'text-gray-800 hover:text-indigo-500': $route.path != '/',
             }"
             class="
               w-full
               focus:text-teal-500
-              hover:text-indigo-500
-              text-gray-800
               justify-center
               inline-block
               text-center
@@ -243,13 +239,12 @@
           <a
             href="/posts"
             :class="{
-              'text-indigo-500': $route.path == '/posts',
-              'text-gray-800': $route.path != '/posts',
+              'text-white bg-indigo-500 rounded-md': $route.path == '/posts',
+              'text-gray-800 hover:text-indigo-500': $route.path != '/posts',
             }"
             class="
               w-full
               focus:text-teal-500
-              hover:text-indigo-500
               justify-center
               inline-block
               text-center
@@ -264,13 +259,12 @@
           <a
             href="/projects"
             :class="{
-              'text-indigo-500': $route.path == '/projects',
-              'text-gray-800': $route.path != '/projects',
+              'text-white bg-indigo-500 rounded-md': $route.path == '/projects',
+              'text-gray-800 hover:text-indigo-500': $route.path != '/projects',
             }"
             class="
               w-full
               focus:text-teal-500
-              hover:text-indigo-500
               justify-center
               inline-block
               text-center
@@ -285,13 +279,12 @@
           <a
             href="/about-us"
             :class="{
-              'text-indigo-500': $route.path == '/about-us',
-              'text-gray-800': $route.path != '/about-us',
+              'text-white bg-indigo-500 rounded-md': $route.path == '/about-us',
+              'text-gray-800 hover:text-indigo-500': $route.path != '/about-us',
             }"
             class="
               w-full
               focus:text-teal-500
-              hover:text-indigo-500
               justify-center
               inline-block
               text-center

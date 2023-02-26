@@ -4,8 +4,11 @@
       <div
         class="text-2xl md:text-4xl text-start mb-6 font-bold text-indigo-900"
       >
-        <span class="text-2xl md:text-4xl mb-6 font-bold text-indigo-900"
-          >Articles({{ posts.length }})</span
+        <span class="text-xl md:text-2xl mb-6 font-bold text-indigo-900"
+          >Articles
+          <span class="border border-gray-500 px-3 py-1 rounded-full">{{
+            posts.length
+          }}</span></span
         >
       </div>
       <div class="flex flex-wrap">
@@ -28,12 +31,12 @@
                 smallHeight
               "
             >
-              <img
+              <!-- <img
                 v-if="post.image"
                 alt="Placeholder"
                 class="block h-56 md:h-64 w-full"
                 :src="post.image.url"
-              />
+              /> -->
               <div v-if="post.tags">
                 <div class="flex flex-row">
                   <button
@@ -217,11 +220,11 @@ export default {
 </script>
 <style scoped>
 .smallHeight {
-  height: 420px;
+  height: 200px;
 }
 @media (min-width: 768px) {
   .cardHeight {
-    height: 480px;
+    height: 230px;
   }
 }
 </style>

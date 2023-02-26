@@ -20,7 +20,8 @@
                 hover:shadow-md
                 bg-white
                 w-full
-                shadow-sm
+                mb-6
+                md:mb-0
                 rounded-lg
                 border
               "
@@ -39,7 +40,18 @@
                 >
                   <img
                     v-if="category.image"
-                    class="w-8 h-8 mr-4 rounded-full"
+                    class="
+                      w-14
+                      h-14
+                      p-1
+                      mr-20
+                      md:mr-32
+                      border border-gray-200
+                      mb-20
+                      absolute
+                      shadow-md
+                      rounded-full
+                    "
                     :src="category.image.url"
                     alt=""
                   />

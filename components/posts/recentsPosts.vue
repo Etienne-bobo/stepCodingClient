@@ -1,7 +1,7 @@
 <template>
   <div class="mx-4 mb-32">
     <div class="max-w-7xl mx-auto">
-      <p class="text-indigo-500 text-2xl md:px-0 my-12 font-bold">
+      <p class="text-indigo-500 text-xl md:px-0 my-12 font-bold">
         Popular articles
       </p>
       <div class="flex flex-wrap mx-auto md:px-0 my-12">
@@ -17,20 +17,20 @@
             <div
               class="
                 overflow-hidden
+                hover:shadow-md
                 cardHeight
                 smallHeight
-                hover:shadow-md
                 border
                 focus:outline-none
                 rounded-lg
               "
             >
-              <img
+              <!-- <img
                 v-if="post.image"
                 alt="Placeholder"
-                class="block md:h-64 h-56 w-full"
+                class="block md:h-64 h-56 rounded-full"
                 :src="post.image.url"
-              />
+              /> -->
               <div v-if="post.tags">
                 <div class="flex flex-row">
                   <button
@@ -104,11 +104,15 @@ export default {
 </script>
 <style scoped>
 .smallHeight {
-  height: 420px;
+  height: 200px;
 }
 @media (min-width: 768px) {
   .cardHeight {
-    height: 480px;
+    height: 230px;
   }
 }
 </style>
+
+<!-- cardHeight
+  smallHeight
+  -->

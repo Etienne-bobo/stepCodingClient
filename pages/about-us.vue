@@ -183,12 +183,12 @@
                   <i
                     class="fas fa-map-marker-alt mr-2 text-lg text-gray-500"
                   ></i>
-                  Full Stack Dev, Machine Learning
+                  Full Stack Dev, Data Science
                 </div>
                 <div class="mb-2 text-gray-700 mt-10">
                   <i class="ci-location_outline text-lg"></i>
                   <i class="fas fa-briefcase mr-2 text-lg text-gray-500"></i
-                  >Shimla, India
+                  >France
                 </div>
                 <!-- <div class="mb-2 text-gray-700">
                   <i class="fas fa-university mr-2 text-lg text-gray-500"></i
