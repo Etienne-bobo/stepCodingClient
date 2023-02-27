@@ -1,24 +1,18 @@
 <template>
   <div class="mx-4 block inset-x-0 justify-center absolute top-0">
     <div class="max-w-7xl mt-28 my-12 mx-auto lg:px-0">
-      <div
-        class="text-2xl md:text-4xl text-center mb-6 font-bold text-indigo-900"
-      >
+      <div class="text-xl md:text-2xl text-left mb-6 font-bold text-indigo-900">
         <span
-          >All articles in
+          >Articles in
           <span class="text-indigo-500"> {{ category.name }}</span></span
         >
         <span
-          class="
-            text-2xl
-            md:text-4xl
-            text-center
-            mb-6
-            font-bold
-            text-indigo-900
-          "
+          class="text-xl md:text-2xl text-center mb-6 font-bold text-indigo-900"
           >categorie</span
         >
+        <span class="border rounded-full px-3 py-1">{{
+          category.posts.length
+        }}</span>
       </div>
       <div class="flex flex-wrap">
         <!-- Column -->
@@ -40,12 +34,12 @@
                 smallHeight
               "
             >
-              <img
+              <!-- <img
                 v-if="post.image"
                 alt="Placeholder"
                 class="block h-56 md:h-64 w-full"
                 :src="post.image.url"
-              />
+              /> -->
               <div v-if="post.tags">
                 <div class="flex flex-row">
                   <button
@@ -246,11 +240,11 @@ export default {
 </script>
 <style scoped>
 .smallHeight {
-  height: 420px;
+  height: 200px;
 }
 @media (min-width: 768px) {
   .cardHeight {
-    height: 480px;
+    height: 230px;
   }
 }
 </style>
