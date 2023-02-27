@@ -160,7 +160,7 @@
               <div class="text-center mt-6">
                 <h3
                   class="
-                    text-4xl
+                    text-xl
                     font-semibold
                     leading-normal
                     mb-2
