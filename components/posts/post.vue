@@ -41,7 +41,6 @@
         <article
           v-if="post.content"
           id="content"
-          class="opacity-80 l"
           v-html="$md.render(post.content || '')"
         ></article>
       </div>

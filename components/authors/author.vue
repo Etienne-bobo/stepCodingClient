@@ -285,7 +285,7 @@
             </div>
           </div>
         </div>
-        <div class="mb-4 max-w-7xl mx-auto">
+        <div v-if="author.projects.length != 0" class="mb-4 max-w-7xl mx-auto">
           <p class="text-indigo-500 px-4 text-xl my-4 font-bold">My Projects</p>
           <div class="flex flex-wrap max-w-7xl">
             <div

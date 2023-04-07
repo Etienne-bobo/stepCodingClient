@@ -9,35 +9,35 @@
   }
 
   h1 {
-    @apply text-4xl text-gray-800 font-bold my-2;
+    @apply text-4xl text-black font-bold my-2;
 
     @media screen and (max-width: 800px) {
       @apply text-2xl;
     }
     code {
-      @apply border text-sm p-1 rounded bg-gray-100 text-gray-800 break-normal;
+      @apply border text-sm p-1 rounded bg-gray-100 text-black break-normal;
     }
   }
 
   h2 {
-    @apply text-2xl text-gray-700 font-bold my-2;
+    @apply text-2xl text-black font-bold my-2;
     code {
-      @apply border text-sm p-1 rounded bg-gray-100 text-gray-800 break-normal;
+      @apply border text-sm p-1 rounded bg-gray-100 text-black break-normal;
     }
   }
 
   h3 {
-    @apply text-xl text-gray-700 font-bold my-6 underline;
+    @apply text-xl text-black font-bold my-6 underline;
     code {
-      @apply border text-sm p-1 rounded bg-gray-100 text-gray-800 break-normal;
+      @apply border text-sm p-1 rounded bg-gray-100 text-black break-normal;
     }
   }
 
   p {
-    @apply text-base text-gray-700  my-4 leading-loose;
+    @apply text-base text-black  my-4 leading-loose;
 
     code {
-      @apply border text-sm p-1 rounded bg-gray-100 text-gray-800 break-normal;
+      @apply border text-sm p-1 rounded bg-gray-100 text-black break-normal;
     }
   }
 
@@ -80,9 +80,9 @@
     @apply my-4 list-disc;
 
     li {
-      @apply my-4   ml-4 text-gray-700 font-thin;
+      @apply my-4   ml-4 text-black font-thin;
       code {
-        @apply border text-sm p-1 rounded bg-gray-100 text-gray-800 break-normal;
+        @apply border text-sm p-1 rounded bg-gray-100 text-black break-normal;
       }
     }
   }
