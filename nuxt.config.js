@@ -89,7 +89,7 @@ export default {
 
   env: {
     // strapiBaseUri: 'https://stpcoding-backend.herokuapp.com/',
-    strapiBaseUri: 'http://localhost:1337/',
+    strapiBaseUri: 'https://232e-45-66-109-92.ngrok-free.app/',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
