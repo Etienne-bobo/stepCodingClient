@@ -5,7 +5,7 @@
         class="
           grid
           md:grid-cols-6
-          lg:grid-cols-8
+          lg:grid-cols-6
           sm:grid-cols-4
           grid-cols-3
           max-w-7xl
